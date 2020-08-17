@@ -1,0 +1,224 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/ptddxq_bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+html .main,
+body .main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html .main .top,
+body .main .top {
+  width: 100%;
+  height: 15.4667vw;
+  background-color: white;
+  position: fixed;
+  top: 0vw;
+  left: 0vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+html .main .top .logo,
+body .main .top .logo {
+  width: 11.7333vw;
+  height: 11.7333vw;
+  margin-left: 3.2vw;
+}
+html .main .top .logo img,
+body .main .top .logo img {
+  width: 100%;
+  height: 100%;
+}
+html .main .top span,
+body .main .top span {
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  margin-left: 3.6vw;
+}
+html .main .top .download,
+body .main .top .download {
+  width: 17.3333vw;
+  height: 7.4667vw;
+  background-image: url("../images/h5_btn_download.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 7.4667vw;
+  text-align: center;
+  margin-left: 45.6vw;
+}
+html .main .course,
+body .main .course {
+  width: 93.6vw;
+  height: 36vw;
+  background: #ffffff;
+  border-radius: 2.1333vw;
+  margin-top: 44.8vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+html .main .course .courseLeft,
+body .main .course .courseLeft {
+  width: 32.2667vw;
+  height: 18.6667vw;
+  border-radius: 1.3333vw;
+  margin-left: 3.8667vw;
+}
+html .main .course .courseLeft img,
+body .main .course .courseLeft img {
+  width: 100%;
+  height: 100%;
+}
+html .main .course .courseRight,
+body .main .course .courseRight {
+  width: 53.3333vw;
+  height: 18.6667vw;
+  margin-left: 3.4667vw;
+}
+html .main .course .courseRight h2,
+body .main .course .courseRight h2 {
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+}
+html .main .course .courseRight .text,
+body .main .course .courseRight .text {
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #a9a9a9;
+  margin-top: 2.0333vw;
+}
+html .main .course .courseRight .price,
+body .main .course .courseRight .price {
+  font-size: 4.8vw;
+  font-family: DIN;
+  font-weight: bold;
+  color: #fd3b00;
+  margin-top: 1.5vw;
+}
+html .main .course .courseRight .price span,
+body .main .course .courseRight .price span {
+  font-size: 3.4667vw;
+}
+html .main .course .courseRight .price .priceNum,
+body .main .course .courseRight .price .priceNum {
+  font-size: 4.8vw;
+  display: inline-block;
+}
+html .main .group,
+body .main .group {
+  width: 93.6vw;
+  height: 63.2vw;
+  background: #ffffff;
+  border-radius: 2.1333vw;
+  margin-top: 4vw;
+}
+html .main .group .groupLeft,
+body .main .group .groupLeft {
+  width: 13.3333vw;
+  height: 22.6667vw;
+  float: left;
+  margin-left: 28.8vw;
+  position: relative;
+}
+html .main .group .groupLeft .user,
+body .main .group .groupLeft .user {
+  width: 13.3333vw;
+  height: 13.3333vw;
+  position: absolute;
+  left: 0vw;
+  bottom: 0vw;
+}
+html .main .group .groupLeft .user img,
+body .main .group .groupLeft .user img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+html .main .group .groupLeft .qipao,
+body .main .group .groupLeft .qipao {
+  width: 14.4vw;
+  height: 13.3333vw;
+  background-image: url("../images/ptddxq_tag.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 500;
+  position: absolute;
+  top: 2.4vw;
+  right: -7.2vw;
+  font-size: 3.2vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  line-height: 10.6667vw;
+}
+html .main .group .groupRight,
+body .main .group .groupRight {
+  width: 13.3333vw;
+  height: 22.6667vw;
+  float: right;
+  margin-right: 28.8vw;
+  position: relative;
+}
+html .main .group .groupRight .other,
+body .main .group .groupRight .other {
+  width: 13.3333vw;
+  height: 13.3333vw;
+  position: absolute;
+  left: 0vw;
+  bottom: 0vw;
+  background-color: #dddddd;
+  font-size: 4.5333vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #999999;
+  text-align: center;
+  line-height: 13.3333vw;
+  border-radius: 50%;
+}
+html .main .group .groupMsg,
+body .main .group .groupMsg {
+  display: block;
+  clear: both;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  text-align: center;
+  margin-top: 30.4vw;
+}
+html .main .group .groupBtn,
+body .main .group .groupBtn {
+  width: 68.5333vw;
+  height: 12.8vw;
+  background: linear-gradient(140deg, #ffb135, #ffd335);
+  border-radius: 6.4vw;
+  margin-left: 12.5333vw;
+  margin-top: 6.9333vw;
+  font-size: 3.4667vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  line-height: 12.8vw;
+}

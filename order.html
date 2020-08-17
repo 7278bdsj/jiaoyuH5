@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>订单详情</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <script src="./js/jquery-2.2.1.min.js"></script>
+  <link rel="stylesheet" href="./css/order.css">
+</head>
+<body>
+  <div class="main">
+    <div class="top">
+      <div class="logo">
+        <img src="./images/h5_logo.png" alt="">
+      </div>
+      <span>
+        教育机构
+      </span>
+      <div class="download">下载</div>
+    </div>
+    <div class="course">
+      <div class="courseLeft">
+        <img src="./images/jg_banner_photo_01.png" alt="">
+      </div>
+      <div class="courseRight">
+        <h2>美联英语</h2>
+        <div class="text">雅思英语阅读提分指南</div>
+        <div class="price"><span>￥</span><div class="priceNum">2333</div></div>
+      </div>
+    </div>
+    <div class="group">
+      <div class="groupLeft">
+        <div class="user">
+          <img src="./images/jg_banner_photo_01.png" alt="">
+        </div>
+        <div class="qipao">拼主</div>
+      </div>
+      <div class="groupRight">
+        <div class="other">?</div>
+      </div>
+      <span class="groupMsg">
+        仅剩1个名额，还差03:00:00结束
+      </span>
+      <div class="groupBtn">
+        参与xxx（显示拼主昵称）的拼团
+      </div>
+    </div>
+  </div>
+<script>
+var url="www.********.com/redict?id=9&sessionId=adasasascasafdsgdg";
+ var list1=url.split("?")[1].split("&");
+ var object={};
+ for(var i=0;i<list1.length;i++){
+   var list2=list1[i].split("=");
+   object[list2[0]]=list2[1];
+ }
+ var id=object.id;
+ var sessionId=object.sessionId;
+ 
+ //获取拼团订单的详情信息
+
+ $.ajax({
+   type: "post",
+   url: "http://47.107.81.81/jiaoyujigou/api/order/pinDetail",
+   data: {
+     id:id,
+     sessionId:sessionId
+   },
+   dataType: "json",
+   success: function (res) {
+     var data=res.data;
+     var leader={};
+     $(".courseRight h2").text(data.name);
+     $(".courseRight .text").text(data.organizationName);
+     $(".priceNum").text(data.price);
+     
+     $(".groupMsg").text("仅剩"+data.pin.residue+"个名额，还差"+data.pin.residueTime+"结束");
+     for(var i=0;i<data.list.length;i++){
+       if(data.list[i].isleader==0){
+        leader=data.list[i];
+       }else{
+
+       }
+     }
+     $(".user img").attr("src","http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+leader.avatar);
+     $(".groupBtn").text("参与"+leader.nick+"的拼团")
+   }
+ });
+</script>
+</body>
+</html>

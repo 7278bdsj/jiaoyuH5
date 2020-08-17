@@ -1,0 +1,608 @@
+html,
+body {
+  width: 100%;
+  height: auto;
+  background-color: #f7f7f7;
+}
+html .main,
+body .main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html .main .top,
+body .main .top {
+  width: 100%;
+  height: 15.4667vw;
+  background-color: white;
+  position: fixed;
+  top: 0vw;
+  left: 0vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+html .main .top .logo,
+body .main .top .logo {
+  width: 11.7333vw;
+  height: 11.7333vw;
+  margin-left: 3.2vw;
+}
+html .main .top .logo img,
+body .main .top .logo img {
+  width: 100%;
+  height: 100%;
+}
+html .main .top span,
+body .main .top span {
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  margin-left: 3.6vw;
+}
+html .main .top .download,
+body .main .top .download {
+  width: 17.3333vw;
+  height: 7.4667vw;
+  background-image: url("../images/h5_btn_download.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 7.4667vw;
+  text-align: center;
+  margin-left: 45.6vw;
+}
+html .main .middle,
+body .main .middle {
+  width: 100%;
+  height: auto;
+  margin-top: 13.4667vw;
+}
+html .main .middle .m-top,
+body .main .middle .m-top {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+html .main .middle .m-top h2,
+body .main .middle .m-top h2 {
+  font-size: 4.8vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  margin-top: 2.1333vw;
+  margin-left: 3.6vw;
+}
+html .main .middle .m-top .score,
+body .main .middle .m-top .score {
+  width: 100%;
+  height: 16vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+html .main .middle .m-top .score .scoreMain,
+body .main .middle .m-top .score .scoreMain {
+  width: 7.4667vw;
+  height: 6.6vw;
+  margin-left: 3.3333vw;
+  font-size: 5.6vw;
+  font-family: DIN;
+  font-weight: bold;
+  color: #fed222;
+  line-height: 6.6vw;
+}
+html .main .middle .m-top .score .xinxin,
+body .main .middle .m-top .score .xinxin {
+  width: 25.3333vw;
+  height: 4.2667vw;
+  margin-left: 1.6vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+html .main .middle .m-top .score .xinxin .xinImg,
+body .main .middle .m-top .score .xinxin .xinImg {
+  width: 4vw;
+  height: 4vw;
+  background-image: url("../images/shopping_tab_sc_sel.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+html .main .middle .m-top .score .xinxin .xinImg2,
+body .main .middle .m-top .score .xinxin .xinImg2 {
+  width: 4vw;
+  height: 4vw;
+  background-image: url("../images/whxq_star_gray.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+html .main .middle .m-top .score .buyPeople,
+body .main .middle .m-top .score .buyPeople {
+  font-size: 3.4667vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #999999;
+  margin-left: 5.0667vw;
+}
+html .main .middle .m-top .score .english,
+body .main .middle .m-top .score .english {
+  width: 12.2667vw;
+  height: 5.3333vw;
+  background: #fff9ef;
+  border: 1px solid #ffbb9a;
+  border-radius: 1.3333vw;
+  margin-left: 10.6667vw;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #ff7a39;
+  line-height: 5.3333vw;
+  text-align: center;
+}
+html .main .middle .m-top .score .fayu,
+body .main .middle .m-top .score .fayu {
+  width: 12.2667vw;
+  height: 5.3333vw;
+  background: #f0fcff;
+  border: 1px solid #cae7ff;
+  border-radius: 1.3333vw;
+  margin-left: 2.4vw;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #ff7a39;
+  line-height: 5.3333vw;
+  text-align: center;
+}
+html .main .middle .m-top .images,
+body .main .middle .m-top .images {
+  width: 100%;
+  height: 33.0667vw;
+  overflow: auto;
+  margin-bottom: 6.6667vw;
+}
+html .main .middle .m-top .images .imgMain,
+body .main .middle .m-top .images .imgMain {
+  width: 132.8vw;
+  height: 33.0667vw;
+}
+html .main .middle .m-top .images .imgMain .image0,
+body .main .middle .m-top .images .imgMain .image0 {
+  width: 58.6667vw;
+  height: 33.0667vw;
+  float: left;
+  margin-left: 3.2vw;
+  border-radius: 1.3333vw;
+}
+html .main .middle .m-top .images .imgMain .image0 img,
+body .main .middle .m-top .images .imgMain .image0 img {
+  width: 100%;
+  height: 100%;
+}
+html .main .middle .m-top .line,
+body .main .middle .m-top .line {
+  width: 96.8vw;
+  height: 1px;
+  background-color: #eeeeee;
+}
+html .main .middle .m-top .message,
+body .main .middle .m-top .message {
+  width: 100%;
+  height: 16vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+html .main .middle .m-top .message .mesIcon,
+body .main .middle .m-top .message .mesIcon {
+  width: 3.7333vw;
+  height: 5.0667vw;
+  margin-left: 3.2vw;
+}
+html .main .middle .m-top .message .mesIcon img,
+body .main .middle .m-top .message .mesIcon img {
+  width: 100%;
+  height: 100%;
+}
+html .main .middle .m-top .message .mesText,
+body .main .middle .m-top .message .mesText {
+  width: 61.7333vw;
+  height: 100%;
+  padding: 3.6vw 0 3.6vw 0;
+  box-sizing: border-box;
+  font-size: 3.4667vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  line-height: 8.8vw;
+  margin-left: 3.2vw;
+}
+html .main .middle .m-top .message .line,
+body .main .middle .m-top .message .line {
+  width: 1px;
+  height: 8vw;
+  background-color: #eeeeee;
+  margin-left: 12.1333vw;
+}
+html .main .middle .m-top .message .PhoneIcon,
+body .main .middle .m-top .message .PhoneIcon {
+  width: 4.1333vw;
+  height: 5.0667vw;
+  margin-left: 5.8667vw;
+}
+html .main .middle .m-top .message .PhoneIcon img,
+body .main .middle .m-top .message .PhoneIcon img {
+  width: 100%;
+  height: 100%;
+}
+html .main .middle .m-bottom,
+body .main .middle .m-bottom {
+  width: 100%;
+  height: 42.8vw;
+  margin-top: 2.6667vw;
+}
+html .main .middle .m-bottom .service,
+body .main .middle .m-bottom .service {
+  width: 100%;
+  height: 21.3333vw;
+  background-color: white;
+}
+html .main .middle .m-bottom .service .serviceTop,
+body .main .middle .m-bottom .service .serviceTop {
+  width: 23.3333vw;
+  height: 5.3333vw;
+  padding-top: 4vw;
+  margin-left: 3.2vw;
+}
+html .main .middle .m-bottom .service .serviceTop .image,
+body .main .middle .m-bottom .service .serviceTop .image {
+  width: 5.3333vw;
+  height: 5.3333vw;
+  float: left;
+}
+html .main .middle .m-bottom .service .serviceTop .image img,
+body .main .middle .m-bottom .service .serviceTop .image img {
+  width: 100%;
+  height: 100%;
+}
+html .main .middle .m-bottom .service .serviceTop .text,
+body .main .middle .m-bottom .service .serviceTop .text {
+  float: left;
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  padding-left: 1.6vw;
+}
+html .main .middle .m-bottom .service .serviceBottom,
+body .main .middle .m-bottom .service .serviceBottom {
+  clear: both;
+  font-size: 3.4667vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #aaaaaa;
+  margin-left: 3.2vw;
+  margin-top: 3.3333vw;
+}
+html .main .middle .m-bottom .discount,
+body .main .middle .m-bottom .discount {
+  margin-top: 1px;
+  width: 100%;
+  height: 21.3333vw;
+  background-color: white;
+}
+html .main .middle .m-bottom .discount .discountTop,
+body .main .middle .m-bottom .discount .discountTop {
+  width: 23.3333vw;
+  height: 5.3333vw;
+  padding-top: 4vw;
+  margin-left: 3.2vw;
+}
+html .main .middle .m-bottom .discount .discountTop .image,
+body .main .middle .m-bottom .discount .discountTop .image {
+  width: 5.3333vw;
+  height: 5.3333vw;
+  float: left;
+}
+html .main .middle .m-bottom .discount .discountTop .image img,
+body .main .middle .m-bottom .discount .discountTop .image img {
+  width: 100%;
+  height: 100%;
+}
+html .main .middle .m-bottom .discount .discountTop .text,
+body .main .middle .m-bottom .discount .discountTop .text {
+  float: left;
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  padding-left: 1.6vw;
+}
+html .main .middle .m-bottom .discount .discountBottom,
+body .main .middle .m-bottom .discount .discountBottom {
+  clear: both;
+  width: 35.4667vw;
+  height: 8vw;
+  text-align: center;
+  line-height: 8vw;
+  font-size: 3.4667vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #f8af06;
+  margin-left: 3.2vw;
+  margin-top: 2.1333vw;
+  background-color: #fff9ec;
+}
+html .main .bottom,
+body .main .bottom {
+  width: 100%;
+  height: auto;
+  margin-top: 2.8vw;
+}
+html .main .bottom .group-buy,
+body .main .bottom .group-buy {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding-bottom: 7.2vw;
+}
+html .main .bottom .group-buy .title,
+body .main .bottom .group-buy .title {
+  width: 18.6667vw;
+  height: 5.3333vw;
+  padding-top: 3.7333vw;
+  padding-left: 3.0667vw;
+}
+html .main .bottom .group-buy .title .titleIcon,
+body .main .bottom .group-buy .title .titleIcon {
+  width: 5.3333vw;
+  height: 5.3333vw;
+  float: left;
+}
+html .main .bottom .group-buy .title .titleIcon img,
+body .main .bottom .group-buy .title .titleIcon img {
+  width: 100%;
+  height: 100%;
+}
+html .main .bottom .group-buy .title .titleText,
+body .main .bottom .group-buy .title .titleText {
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+html .main .bottom .group-buy li,
+body .main .bottom .group-buy li {
+  width: 100%;
+  height: 18.6667vw;
+  display: block;
+  padding-top: 4.2667vw;
+}
+html .main .bottom .group-buy li .image,
+body .main .bottom .group-buy li .image {
+  width: 32.2667vw;
+  height: 18.6667vw;
+  float: left;
+  margin-left: 3.2vw;
+}
+html .main .bottom .group-buy li .image img,
+body .main .bottom .group-buy li .image img {
+  width: 100%;
+  height: 100%;
+}
+html .main .bottom .group-buy li .title,
+body .main .bottom .group-buy li .title {
+  width: 46.6667vw;
+  height: 20vw;
+  float: left;
+  padding: 0;
+  margin-left: 3.6vw;
+}
+html .main .bottom .group-buy li .title h3,
+body .main .bottom .group-buy li .title h3 {
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+html .main .bottom .group-buy li .title .number,
+body .main .bottom .group-buy li .title .number {
+  display: block;
+  font-size: 3.2vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #bbbbbb;
+  margin-top: 2.2vw;
+}
+html .main .bottom .group-buy li .title .price .nowPrice,
+body .main .bottom .group-buy li .title .price .nowPrice {
+  float: left;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #fe3c00;
+}
+html .main .bottom .group-buy li .title .price .nowPrice span,
+body .main .bottom .group-buy li .title .price .nowPrice span {
+  font-size: 5.3333vw;
+  font-family: DIN;
+  font-weight: bold;
+  color: #fe3c00;
+}
+html .main .bottom .group-buy li .title .price .oldPrice,
+body .main .bottom .group-buy li .title .price .oldPrice {
+  float: left;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #cecece;
+  line-height: 6.9333vw;
+}
+html .main .bottom .group-buy li .title .price .oldPrice span,
+body .main .bottom .group-buy li .title .price .oldPrice span {
+  font-size: 4.5333vw;
+  font-family: DIN;
+  font-weight: bold;
+  color: #cecece;
+}
+html .main .bottom .course,
+body .main .bottom .course {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  margin-top: 2.8vw;
+}
+html .main .bottom .course .title,
+body .main .bottom .course .title {
+  width: 18.6667vw;
+  height: 5.3333vw;
+  padding-top: 3.7333vw;
+  padding-left: 3.0667vw;
+}
+html .main .bottom .course .title .titleIcon,
+body .main .bottom .course .title .titleIcon {
+  width: 5.3333vw;
+  height: 5.3333vw;
+  float: left;
+}
+html .main .bottom .course .title .titleIcon img,
+body .main .bottom .course .title .titleIcon img {
+  width: 100%;
+  height: 100%;
+}
+html .main .bottom .course .title .titleText,
+body .main .bottom .course .title .titleText {
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+html .main .bottom .course .line,
+body .main .bottom .course .line {
+  width: 93.6vw;
+  height: 1px;
+  background-color: #eeeeee;
+  margin-left: 3.2vw;
+}
+html .main .bottom .course li,
+body .main .bottom .course li {
+  width: 100%;
+  height: 18.6667vw;
+  display: block;
+  padding-top: 4.2667vw;
+  padding-bottom: 5.6vw;
+}
+html .main .bottom .course li .image,
+body .main .bottom .course li .image {
+  width: 32.2667vw;
+  height: 18.6667vw;
+  float: left;
+  margin-left: 3.2vw;
+}
+html .main .bottom .course li .image img,
+body .main .bottom .course li .image img {
+  width: 100%;
+  height: 100%;
+}
+html .main .bottom .course li .title,
+body .main .bottom .course li .title {
+  width: 46.6667vw;
+  height: 20vw;
+  float: left;
+  padding: 0;
+  margin-left: 3.6vw;
+}
+html .main .bottom .course li .title h3,
+body .main .bottom .course li .title h3 {
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+html .main .bottom .course li .title .number,
+body .main .bottom .course li .title .number {
+  display: block;
+  font-size: 3.2vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #bbbbbb;
+  margin-top: 2.2vw;
+}
+html .main .bottom .course li .title .price .nowPrice,
+body .main .bottom .course li .title .price .nowPrice {
+  float: left;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #fe3c00;
+}
+html .main .bottom .course li .title .price .nowPrice span,
+body .main .bottom .course li .title .price .nowPrice span {
+  font-size: 5.3333vw;
+  font-family: DIN;
+  font-weight: bold;
+  color: #fe3c00;
+}
+html .main .bottom .course li .title .price .oldPrice,
+body .main .bottom .course li .title .price .oldPrice {
+  float: left;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #cecece;
+  line-height: 6.9333vw;
+}
+html .main .bottom .course li .title .price .oldPrice span,
+body .main .bottom .course li .title .price .oldPrice span {
+  font-size: 4.5333vw;
+  font-family: DIN;
+  font-weight: bold;
+  color: #cecece;
+}
+html .main .bottom .consult,
+body .main .bottom .consult {
+  width: 100%;
+  height: 13.0667vw;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.6667vw;
+}
+html .main .bottom .consult .consultMain,
+body .main .bottom .consult .consultMain {
+  width: 24.4vw;
+  height: 5.0667vw;
+}
+html .main .bottom .consult .consultMain .conImg,
+body .main .bottom .consult .consultMain .conImg {
+  width: 5.0667vw;
+  height: 5.0667vw;
+  float: left;
+}
+html .main .bottom .consult .consultMain .conImg img,
+body .main .bottom .consult .consultMain .conImg img {
+  width: 100%;
+  height: 100%;
+}
+html .main .bottom .consult .consultMain .conText,
+body .main .bottom .consult .consultMain .conText {
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  line-height: 5.0667vw;
+  margin-left: 1.6vw;
+  float: left;
+}

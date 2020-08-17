@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>课程详情</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <script src="./js/jquery-2.2.1.min.js"></script>
+  <link rel="stylesheet" href="./css/course.css">
+  <link rel="stylesheet" href="./css/swiper-3.4.2.min.css">
+</head>
+<body>
+  <div class="main">
+    <div class="top">
+      <div class="logo">
+        <img src="./images/h5_logo.png" alt="">
+      </div>
+      <span>
+        教育机构
+      </span>
+      <div class="download">下载</div>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <!-- <div class="swiper-slide">
+            <img src="./images/shopping_sku.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/shopping_sku.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/shopping_sku.png" alt="">
+          </div> -->
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+  </div>
+  <div class="courseMain">
+    <h2>英语零基础入门口语课程</h2>
+    <div class="courseText">精心打造的入门级别口语课程</div>
+    <div class="priceAndNumber">
+      <div class="price"><span>￥</span><span class="priceNum">199.0</span></div>
+      <div class="number">已售2500</div>
+    </div>
+  </div>
+  <div class="courseLine"></div>
+  <div class="courseServe">
+   <span></span>
+  </div>
+  <div class="courseIntroduction">
+    <h2>课程介绍</h2>
+    <!-- <p>课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍。</p><br>
+    <div class="images">
+      <img src="./images/jg_banner_photo_01.png" alt="">
+    </div> -->
+    <div class="courseContent">
+
+    </div>
+  </div>
+  <div class="buyIntroduction">
+    <h2>购买须知</h2>
+    <!-- <p>购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知。</p>
+     -->
+     <div class="buyContent">
+
+    </div>
+  </div>
+  <div class="comment">
+    <!-- <div class="title">用户评价</div> -->
+    <!-- <div class="commitItem">
+      <div class="user">
+        <div class="userAvator">
+          <img src="./images/jg_banner_photo_01.png" alt="">
+        </div>
+        <div class="Uname">
+          <div class="UName">PP小丸子</div>
+          <div class="grade">
+          <div class="gradeNum">评分</div>
+          <div class="xinxin">
+            <div class="xinImg2"></div>
+            <div class="xinImg2"></div>
+            <div class="xinImg2"></div>
+            <div class="xinImg2"></div>
+            <div class="xinImg2"></div>
+          </div>
+        </div>
+        </div>
+        <div class="time">2019-06-09</div>
+      </div>
+      <div class="conContain">
+        <span>
+          服务非常满意，下次继续合作，服务非常满意，
+          下次继续合作
+      </span>
+      <div class="comImg">
+        <img src="./images/jg_banner_photo_01.png" alt="">
+      </div>
+      <div class="comImg">
+        <img src="./images/jg_banner_photo_01.png" alt="">
+      </div>
+      <div class="comImg">
+        <img src="./images/jg_banner_photo_01.png" alt="">
+      </div>
+      </div>
+    </div> -->
+  </div>
+  <div class="coMore">查看用户所有评价</div>
+  <div class="groupBuyBottom">
+    <div class="BuyBottom">
+      <div class="shouc">
+        <div class="BuyBottomImg">
+          <img src="./images/shopping_tab_sc_sel.png" alt="">
+        </div>
+        <span>收藏</span>
+      </div>
+      <div class="zixun">
+        <div class="BuyBottomImg">
+          <img src="./images/shopping_tab_icon_consult.png" alt="">
+        </div>
+        <span>咨询</span>
+      </div>
+      <div class="share">
+        <div class="BuyBottomImg">
+          <img src="./images/shopping_tab_share.png" alt="">
+        </div>
+        <span>分享</span>
+      </div>
+    </div>
+    <div class="addOrder">
+      <span class="coPrice">￥1100</span><br>
+      <span class="coText">发起拼团</span>
+    </div>
+  </div>
+  </div>
+<script src="./js/swiper-3.4.2.min.js"></script>
+<script>
+  //获取轮播图
+ var url="www.********.com/redict?id=10";
+ var list1=url.split("?")[1].split("&");
+ var object={};
+ for(var i=0;i<list1.length;i++){
+   var list2=list1[i].split("=");
+   object[list2[0]]=list2[1];
+ }
+ var id=object.id;
+  $.ajax({
+    type: "post",
+    url: "http://47.107.81.81/jiaoyujigou/api/lesson/detail",
+    data: {
+      id:id
+    },
+    dataType: "json",
+    success: function (res) {
+      // console.log(res);
+      var data=res.data;
+      var bannerHtml="";
+      var serveHtml="";
+      var commitHtml="";
+      for(var i=0;i<data.imgList.length;i++){
+        bannerHtml=bannerHtml+"<div class='swiper-slide'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.imgList[i].img+" alt=''></div>"
+      }
+      //获取轮播图
+      $(".swiper-wrapper").html(bannerHtml);
+      var mySwiper = new Swiper ('.swiper-container', {
+      direction: 'horizontal',
+      loop: true,
+      autoplay: 3000,
+      // 如果需要分页器
+      pagination: '.swiper-pagination'
+    })        
+      //获取并修改courseMain中的内容
+      $(".courseMain h2").text(data.name);
+      $(".courseText").text(data.intro);
+      $(".priceNum").text(data.price);
+      $(".number").text("已售"+data.sellCount);
+      serveHtml="<span>"+data.serviceContent.content1+"</span>&nbsp&nbsp<span>"+data.serviceContent.content2+"</span>&nbsp&nbsp<span>"+data.serviceContent.content3+"</span>&nbsp&nbsp<span>"+data.serviceContent.content4+"</span>&nbsp&nbsp"
+      $(".courseServe").html(serveHtml);
+
+      //获取课程介绍的内容
+      $(".courseContent").html(data.detail);
+  
+      //获取购买须知的内容
+      $(".buyContent").html(data.content);
+      
+      //获取评论的内容
+      for(var z=0;z<data.commentList.length;z++){
+        var xinNum=data.commentList[z].starNum;
+        var xinHtml=""
+        for(var k=0;k<5;k++){
+          if(k<xinNum){
+            xinHtml=xinHtml+"<div class='xinImg'></div>";
+          }else{
+            xinHtml=xinHtml+"<div class='xinImg2'></div>"
+          }
+        }
+        commitHtml=commitHtml+"<div class='commitItem'><div class='user'><div class='userAvator'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.commentList[z].avatar+" alt=''></div><div class='Uname'><div class='UName'>"+data.commentList[z].nick+"</div><div class='grade'><div class='gradeNum'>评分</div><div class='xinxin'>"+xinHtml+"</div></div></div><div class='time'>"+data.commentList[z].createTime+"</div></div><div class='conContain'><span>"+data.commentList[z].content+"</span><div class='comImg'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.commentList[z].img1+" alt=''></div><div class='comImg'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.commentList[z].img1+" alt=''></div><div class='comImg'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.commentList[z].img1+" alt=''></div></div></div>"
+      }
+      $(".comment").html("<div class='title'>用户评价</div>"+commitHtml);
+
+      //获取是否收藏
+      var collect="";
+      if(data.isCollect==0){
+        $(".shouc .BuyBottomImg img").attr("src","./images/shopping_tab_icon_sc.png");
+      }else{
+        $(".shouc .BuyBottomImg img").attr("src","./images/shopping_tab_sc_sel.png")
+      }
+      //获取拼团价格
+      $(".coPrice").text("￥"+data.price);
+
+    }
+  });
+</script>
+</body>
+</html>

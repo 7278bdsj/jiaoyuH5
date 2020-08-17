@@ -1,0 +1,276 @@
+html,
+body {
+  width: 100%;
+  height: auto;
+}
+html .main,
+body .main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+html .main .top,
+body .main .top {
+  width: 100%;
+  height: 15.4667vw;
+  background-color: white;
+  position: fixed;
+  top: 0vw;
+  left: 0vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+html .main .top .logo,
+body .main .top .logo {
+  width: 11.7333vw;
+  height: 11.7333vw;
+  margin-left: 3.2vw;
+}
+html .main .top .logo img,
+body .main .top .logo img {
+  width: 100%;
+  height: 100%;
+}
+html .main .top span,
+body .main .top span {
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  margin-left: 3.6vw;
+}
+html .main .top .download,
+body .main .top .download {
+  width: 17.3333vw;
+  height: 7.4667vw;
+  background-image: url("../images/h5_btn_download.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 7.4667vw;
+  text-align: center;
+  margin-left: 45.6vw;
+}
+html .main .articleMain,
+body .main .articleMain {
+  width: 100%;
+  min-height: 66.6667vw;
+  height: auto;
+  padding: 5.8667vw 3.2vw 8vw 3.2vw;
+  box-sizing: border-box;
+  margin-top: 15.4667vw;
+  background-color: white;
+}
+html .main .articleMain h2,
+body .main .articleMain h2 {
+  font-size: 5.0667vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+html .main .articleMain .nameAndTime,
+body .main .articleMain .nameAndTime {
+  width: 100%;
+  height: 4vw;
+  margin-top: 6.8vw;
+}
+html .main .articleMain .nameAndTime .name,
+body .main .articleMain .nameAndTime .name {
+  width: 30.6667vw;
+  height: 100%;
+  float: left;
+  font-size: 3.4667vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+}
+html .main .articleMain .nameAndTime .time,
+body .main .articleMain .nameAndTime .time {
+  width: 21.3333vw;
+  height: 100%;
+  float: right;
+  font-size: 3.4667vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #a9a9a9;
+}
+html .main .articleMain .articleContent,
+body .main .articleMain .articleContent {
+  width: 100%;
+  height: auto;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  margin-top: 7.2vw;
+}
+html .main .articleMain .articleImg,
+body .main .articleMain .articleImg {
+  width: 94.4vw;
+  height: 46.9333vw;
+  margin-top: 3.7333vw;
+}
+html .main .articleMain .articleImg img,
+body .main .articleMain .articleImg img {
+  width: 100%;
+  height: 100%;
+}
+html .main .hotComments,
+body .main .hotComments {
+  width: 100%;
+  min-height: 13.3333vw;
+  height: auto;
+  margin-top: 3.4667vw;
+  background-color: white;
+  padding: 5.6vw 2.6667vw 12.4vw 2.6667vw;
+  box-sizing: border-box;
+}
+html .main .hotComments h2,
+body .main .hotComments h2 {
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+html .main .hotComments ul,
+body .main .hotComments ul {
+  width: 100%;
+  height: auto;
+}
+html .main .hotComments ul li,
+body .main .hotComments ul li {
+  width: 100%;
+  height: auto;
+}
+html .main .hotComments ul li .hotCommentsTop,
+body .main .hotComments ul li .hotCommentsTop {
+  width: 100%;
+  height: 12vw;
+  margin-top: 5.2vw;
+}
+html .main .hotComments ul li .hotCommentsTop .avatorImg,
+body .main .hotComments ul li .hotCommentsTop .avatorImg {
+  width: 12vw;
+  height: 12vw;
+  float: left;
+}
+html .main .hotComments ul li .hotCommentsTop .avatorImg img,
+body .main .hotComments ul li .hotCommentsTop .avatorImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+html .main .hotComments ul li .hotCommentsTop .nameAndTime,
+body .main .hotComments ul li .hotCommentsTop .nameAndTime {
+  width: 14.6667vw;
+  height: 100%;
+  float: left;
+  margin-left: 2.9333vw;
+}
+html .main .hotComments ul li .hotCommentsTop .nameAndTime .name,
+body .main .hotComments ul li .hotCommentsTop .nameAndTime .name {
+  height: 55%;
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  line-height: 6.6vw;
+}
+html .main .hotComments ul li .hotCommentsTop .nameAndTime .time,
+body .main .hotComments ul li .hotCommentsTop .nameAndTime .time {
+  height: 45%;
+  font-size: 3.4667vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #999999;
+  line-height: 5.4vw;
+}
+html .main .hotComments ul li .hotCommentsTop .zhang,
+body .main .hotComments ul li .hotCommentsTop .zhang {
+  width: 14.6667vw;
+  height: 100%;
+  float: right;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+html .main .hotComments ul li .hotCommentsTop .zhang .zhangImg,
+body .main .hotComments ul li .hotCommentsTop .zhang .zhangImg {
+  width: 4vw;
+  height: 4vw;
+}
+html .main .hotComments ul li .hotCommentsTop .zhang .zhangImg img,
+body .main .hotComments ul li .hotCommentsTop .zhang .zhangImg img {
+  width: 100%;
+  height: 100%;
+}
+html .main .hotComments ul li .hotCommentsTop .zhang .zhangNum,
+body .main .hotComments ul li .hotCommentsTop .zhang .zhangNum {
+  font-size: 3.4667vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #aaaaaa;
+}
+html .main .hotComments ul li .hotCommentsBottom,
+body .main .hotComments ul li .hotCommentsBottom {
+  width: 78.6667vw;
+  height: auto;
+  margin-left: 14.8vw;
+  margin-top: 4vw;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+}
+html .main .BottomLine,
+body .main .BottomLine {
+  width: 100%;
+  height: 1px;
+  background-color: #eeeeee;
+}
+html .main .articleBottom,
+body .main .articleBottom {
+  width: 100%;
+  height: 13.0667vw;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+html .main .articleBottom .item,
+body .main .articleBottom .item {
+  width: 18vw;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 9.8667vw;
+}
+html .main .articleBottom .item .articleBottomIcon,
+body .main .articleBottom .item .articleBottomIcon {
+  width: 5.3333vw;
+  height: 5.3333vw;
+}
+html .main .articleBottom .item .articleBottomIcon img,
+body .main .articleBottom .item .articleBottomIcon img {
+  width: 100%;
+  height: 100%;
+}
+html .main .articleBottom .item .articleBottomText,
+body .main .articleBottom .item .articleBottomText {
+  width: 8.5333vw;
+  height: 5.3333vw;
+  font-size: 3.4667vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #999999;
+  margin-left: 2vw;
+}

@@ -1,0 +1,241 @@
+html,body{
+  width: 100%;
+  height: auto;
+  .main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(248, 248, 248, 1);
+    .top{
+      width: 100%;
+      height: 15.4667vw;
+      background-color: white;
+      position: fixed;
+      top: 0vw;
+      left: 0vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .logo{
+        width: 11.7333vw;
+        height: 11.7333vw;
+        margin-left: 3.2vw;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      span{
+        font-size: 4vw;
+        font-family:PingFang SC;
+        font-weight:400;
+        color:rgba(51,51,51,1);
+        margin-left: 3.6vw;
+      }
+      .download{
+        width: 17.3333vw;
+        height: 7.4667vw;
+        background-image: url("../images/h5_btn_download.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 3.7333vw;
+        font-family:PingFang SC;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        line-height: 7.4667vw;
+        text-align: center;
+        margin-left: 45.6vw;
+      }
+    }
+    .articleMain{
+      width: 100%;
+      min-height: 66.6667vw;
+      height: auto;
+      padding: 5.8667vw 3.2vw 8vw 3.2vw;
+      box-sizing: border-box;
+      margin-top: 15.4667vw;
+      background-color: white;
+      h2{
+        font-size: 5.0667vw;
+        font-family:PingFang SC;
+        font-weight:bold;
+        color:rgba(51,51,51,1);
+      }
+      .nameAndTime{
+        width: 100%;
+        height: 4vw;
+        margin-top: 6.8vw;
+        .name{
+          width: 30.6667vw;
+          height: 100%;
+          float: left;
+          font-size: 3.4667vw;
+          font-family:PingFang SC;
+          font-weight:400;
+          color:rgba(51,51,51,1);
+        }
+        .time{
+          width: 21.3333vw;
+          height: 100%;
+          float: right;
+          font-size: 3.4667vw;
+          font-family:PingFang SC;
+          font-weight:400;
+          color:rgba(169,169,169,1);
+        }
+      }
+      .articleContent{
+        width: 100%;
+        height: auto;
+        font-size: 3.7333vw;
+        font-family:PingFang SC;
+        font-weight:400;
+        color:rgba(51,51,51,1);
+        margin-top: 7.2vw;
+      }
+      .articleImg{
+        width: 94.4vw;
+        height: 46.9333vw;
+        margin-top: 3.7333vw;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .hotComments{
+      width: 100%;
+      min-height: 13.3333vw;
+      height: auto;
+      margin-top: 3.4667vw;
+      background-color: white;
+      padding: 5.6vw 2.6667vw 12.4vw 2.6667vw;
+      box-sizing: border-box;
+      h2{
+        font-size: 4vw;
+        font-family:PingFang SC;
+        font-weight:bold;
+        color:rgba(51,51,51,1);
+      }
+      ul{
+        width: 100%;
+        height: auto;
+        li{
+          width: 100%;
+          height: auto;
+          .hotCommentsTop{
+            width: 100%;
+            height: 12vw;
+            margin-top: 5.2vw;
+            .avatorImg{
+              width: 12vw;
+              height: 12vw;
+              float: left;
+              img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+              }
+            }
+            .nameAndTime{
+              width: 14.6667vw;
+              height: 100%;
+              float: left;
+              margin-left: 2.9333vw;
+              .name{
+                height: 55%;
+                font-size: 4vw;
+                font-family:PingFang SC;
+                font-weight:500;
+                color:rgba(51,51,51,1);
+                line-height: 6.6vw;
+              }
+              .time{
+                height: 45%;
+                font-size: 3.4667vw;
+                font-family:PingFang SC;
+                font-weight:400;
+                color:rgba(153,153,153,1);
+                line-height: 5.4vw;
+              }
+            }
+            .zhang{
+              width: 14.6667vw;
+              height: 100%;
+              float: right;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              .zhangImg{
+                width: 4vw;
+                height: 4vw;
+                // float: left;
+                img{
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .zhangNum{
+                font-size: 3.4667vw;
+                font-family:PingFang SC;
+                font-weight:400;
+                color:rgba(170,170,170,1);
+              }
+            }
+          }
+          .hotCommentsBottom{
+            width: 78.6667vw;
+            height: auto;
+            margin-left: 14.8vw;
+            margin-top: 4vw;
+            font-size: 3.7333vw;
+            font-family:PingFang SC;
+            font-weight:400;
+            color:rgba(51,51,51,1);
+          }
+        }
+      }
+    }
+    .BottomLine{
+      width: 100%;
+      height: 1px;
+      background-color: rgba(238, 238, 238, 1);
+    }
+    .articleBottom{
+      width: 100%;
+      height: 13.0667vw;
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .item{
+        width: 18vw;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 9.8667vw;
+        .articleBottomIcon{
+          width: 5.3333vw;
+          height: 5.3333vw;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .articleBottomText{
+          width: 8.5333vw;
+          height: 5.3333vw;
+          font-size: 3.4667vw;
+          font-family:PingFang SC;
+          font-weight:400;
+          color:rgba(153,153,153,1);
+          margin-left: 2vw;
+        }
+      }
+    }
+  }
+}

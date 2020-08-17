@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>机构详情</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <script src="./js/jquery-2.2.1.min.js"></script>
+  <link rel="stylesheet" href="./css/organization.css">
+</head>
+<body>
+  <div class="main">
+    <div class="top">
+      <div class="logo">
+        <img src="./images/h5_logo.png" alt="">
+      </div>
+      <span>
+        教育机构
+      </span>
+      <div class="download">下载</div>
+    </div>
+    <div class="middle">
+      <div class="m-top">
+        <h2>美联英语</h2>
+        <div class="score">
+          <div class="scoreMain"></div>
+          <div class="xinxin">
+            <div class="xin xinImg2"></div>
+            <div class="xin xinImg2"></div>
+            <div class="xin xinImg2"></div>
+            <div class="xin xinImg2"></div>
+            <div class="xin xinImg2"></div>
+          </div>
+          <div class="buyPeople">250人购买</div>
+          <div class="english">英语</div>
+          <div class="fayu">法语</div>
+        </div>
+        <div class="images">
+         <div class="imgMain">
+          <!-- <div class="image0">
+            <img src="./images/jg_banner_photo_01.png" alt="">
+          </div>
+          <div class="image0">
+            <img src="./images/jg_banner_photo_01.png" alt="">
+          </div> -->
+         </div>
+        </div>
+        <div class="line"></div>
+        <div class="message">
+          <div class="mesIcon">
+            <img src="./images/jg_icon_address.png" alt="">
+          </div>
+          <div class="mesText">
+            <!-- 广东省广州市海珠区琶洲新港东路996号 保利世贸中心E座2205 -->
+          </div>
+          <div class="line"></div>
+          <div class="PhoneIcon">
+            <img src="./images/jg_icon_phone.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="m-bottom">
+        <div class="service">
+          <div class="serviceTop">
+            <div class="image">
+              <img src="./images/jg_icon_service.png" alt="">
+            </div>
+            <div class="text">门店服务</div>
+          </div>
+          <div class="serviceBottom">
+            提供免费WIFI服务,提供免费茶饮
+          </div>
+        </div>
+        <div class="discount">
+          <div class="discountTop">
+            <div class="image">
+              <img src="./images/jg_icon_cupon.png" alt="">
+            </div>
+            <div class="text">优惠券</div>
+          </div>
+          <div class="discountBottom">
+            点击领取优惠券
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <ul class="group-buy">
+        <div class="title">
+          <div class="titleIcon">
+            <img src="./images/jg_icon_shopping.png" alt="">
+          </div>
+          <div class="titleText">团购</div>
+        </div>
+        <li>
+          <div class="image">
+            <img src="./images/jg_banner_photo_01.png" alt="">
+          </div>
+          <div class="title">
+              <h3>雅思英语阅读提分指南</h3>
+              <span class="number">已售2500</span>
+              <span class="price">
+                <div class="nowPrice">￥<span>199.0</span></div>
+                <div class="oldPrice">&nbsp&nbsp&nbsp&nbsp￥<span>299.0</span></div>
+              </span>
+          </div>
+        </li>
+      </ul>
+      <ul class="course">
+        <div class="title">
+          <div class="titleIcon">
+            <img src="./images/jg_icon_kc.png" alt="">
+          </div>
+          <div class="titleText">课程</div>
+        </div>
+        <li>
+          <div class="image">
+            <img src="./images/jg_banner_photo_01.png" alt="">
+          </div>
+          <div class="title">
+              <h3>雅思英语阅读提分指南</h3>
+              <span class="number">已售2500</span>
+              <span class="price">
+                <div class="nowPrice">￥<span>199.0</span></div>
+                <div class="oldPrice">&nbsp&nbsp&nbsp&nbsp￥<span>299.0</span></div>
+              </span>
+          </div>
+        </li>
+        <div class="line"></div>
+        <li>
+          <div class="image">
+            <img src="./images/jg_banner_photo_01.png" alt="">
+          </div>
+          <div class="title">
+              <h3>雅思英语阅读提分指南</h3>
+              <span class="number">已售2500</span>
+              <span class="price">
+                <div class="nowPrice">￥<span>199.0</span></div>
+                <div class="oldPrice">&nbsp&nbsp&nbsp&nbsp￥<span>299.0</span></div>
+              </span>
+          </div>
+        </li>
+      </ul>
+      <div class="consult">
+       <div class="consultMain">
+        <div class="conImg">
+          <img src="./images/jg_tab_icon_consult.png" alt="">
+        </div>
+        <div class="conText">
+          立即咨询
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // var url=window.location.href;
+ //获取sessionId和活动id
+ var url="www.********.com/redict?id=9";
+ var list1=url.split("?")[1].split("&");
+ var object={};
+ for(var i=0;i<list1.length;i++){
+   var list2=list1[i].split("=");
+   object[list2[0]]=list2[1];
+ }
+ var id=object.id;
+ $.ajax({
+   type: "post",
+   url: "http://47.107.81.81/jiaoyujigou/api/organization/detail",
+   data: {
+     id:id
+   },
+   dataType: "json",
+   success: function (res) {
+     if(res.code==1){
+       var data=res.data;
+       var groupList=res.data.groupList;
+       //插入机构图集
+       var imgsLength=data.imgList.length;
+       var imgHtml="";
+       var groupHtml="";
+       var courseHtml="";
+       for(var i=0;i<imgsLength;i++){
+        imgHtml=imgHtml+"<div class='image0'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.imgList[i].img+" alt=''></div>";
+       }
+       $(".imgMain").html(imgHtml);
+       //修改地址
+       var address=data.sheng+data.shi+data.qu+data.address;
+       $(".mesText").text(address);
+       //添加团购信息
+       for(var j=0;j<groupList.length;j++){
+        groupHtml=groupHtml+"<li><div class='image'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+groupList[j].img+" alt=''></div><div class='title'><h3>"+groupList[j].name+"</h3><span class='number'>已售"+groupList[j].sellCount+"</span><span class='price'><div class='nowPrice'>￥<span>"+groupList[j].groupPrice+"</span></div><div class='oldPrice'>&nbsp&nbsp&nbsp&nbsp￥<span>"+groupList[j].price+"</span></div></span></div></li>"
+       }
+
+       var group="<div class='title'><div class='titleIcon'><img src='./images/jg_icon_shopping.png' alt=''></div><div class='titleText'>团购</div></div>"+groupHtml;
+       $(".group-buy").html(group);
+       
+       //添加课程信息
+       for(var z=0;z<data.lessonList.length;z++){
+        courseHtml=courseHtml+"<li><div class='image'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.lessonList[z].img+" alt=''></div><div class='title'><h3>"+data.lessonList[z].name+"</h3><span class='number'>已售"+data.lessonList[z].sellCount+"</span><span class='price'><div class='nowPrice'>￥<span>"+data.lessonList[z].price+"</span></div><div class='oldPrice'>&nbsp&nbsp&nbsp&nbsp￥<span></span></div></span></div></li>"
+       }
+
+       var course="<div class='title'><div class='titleIcon'><img src='./images/jg_icon_kc.png' alt=''></div><div class='titleText'>课程</div></div>"+courseHtml;
+
+       $(".course").html(course);
+
+       //获得评分信息并修改星星
+       var grade=$(".scoreMain");
+       grade.text(data.grade+".0");
+       var xinxinList=$(".xin");
+      //  var num=0;
+       for(var i=0;i<data.grade;i++){
+        $(xinxinList[i]).attr("class","xin xinImg");
+       }
+     }else{
+       console.log("数据获取失败");
+     }
+   }
+ });
+  </script>
+</body>
+</html>

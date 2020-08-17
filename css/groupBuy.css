@@ -1,0 +1,594 @@
+html,
+body {
+  width: 100%;
+  height: auto;
+  background-color: #f7f7f7;
+}
+html .main,
+body .main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html .main .top,
+body .main .top {
+  width: 100%;
+  height: 15.4667vw;
+  background-color: white;
+  position: fixed;
+  top: 0vw;
+  left: 0vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 999;
+}
+html .main .top .logo,
+body .main .top .logo {
+  width: 11.7333vw;
+  height: 11.7333vw;
+  margin-left: 3.2vw;
+}
+html .main .top .logo img,
+body .main .top .logo img {
+  width: 100%;
+  height: 100%;
+}
+html .main .top span,
+body .main .top span {
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  margin-left: 3.6vw;
+}
+html .main .top .download,
+body .main .top .download {
+  width: 17.3333vw;
+  height: 7.4667vw;
+  background-image: url("../images/h5_btn_download.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 7.4667vw;
+  text-align: center;
+  margin-left: 45.6vw;
+}
+html .main .swiper-container,
+body .main .swiper-container {
+  width: 100%;
+  height: 75.0667vw;
+  margin-top: 13.4667vw;
+}
+html .main .swiper-container .swiper-wrapper .swiper-slide img,
+body .main .swiper-container .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+html .main .course,
+body .main .course {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding-top: 4.4vw;
+  padding-left: 3.2vw;
+  box-sizing: border-box;
+}
+html .main .course .course1,
+body .main .course .course1 {
+  width: 100%;
+  height: 36vw;
+}
+html .main .course .course1 .left,
+body .main .course .course1 .left {
+  width: 32.2667vw;
+  height: 18.6667vw;
+  border-radius: 1.3333vw;
+  float: left;
+}
+html .main .course .course1 .left img,
+body .main .course .course1 .left img {
+  width: 100%;
+  height: 100%;
+}
+html .main .course .course1 .right,
+body .main .course .course1 .right {
+  float: left;
+  width: 56vw;
+  height: 100%;
+  margin-left: 3.6vw;
+}
+html .main .course .course1 .right .title,
+body .main .course .course1 .right .title {
+  font-size: 4.2667vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+html .main .course .course1 .right .contain,
+body .main .course .course1 .right .contain {
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  margin-top: 2.3667vw;
+}
+html .main .course .course1 .right .number,
+body .main .course .course1 .right .number {
+  font-size: 3.4667vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  margin-top: 2.4vw;
+  color: #bbbbbb;
+}
+html .main .course .course1 .right .price,
+body .main .course .course1 .right .price {
+  margin-top: 3.4667vw;
+}
+html .main .course .course1 .right .price .nowPrice,
+body .main .course .course1 .right .price .nowPrice {
+  float: left;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #fe3c00;
+}
+html .main .course .course1 .right .price .nowPrice span,
+body .main .course .course1 .right .price .nowPrice span {
+  font-size: 5.3333vw;
+  font-family: DIN;
+  font-weight: bold;
+  color: #fe3c00;
+}
+html .main .course .course1 .right .price .oldPrice,
+body .main .course .course1 .right .price .oldPrice {
+  float: left;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #cecece;
+  line-height: 6.9333vw;
+}
+html .main .course .course1 .right .price .oldPrice span,
+body .main .course .course1 .right .price .oldPrice span {
+  font-size: 4.5333vw;
+  font-family: DIN;
+  font-weight: bold;
+  color: #cecece;
+}
+html .main .course .line,
+body .main .course .line {
+  width: 100%;
+  height: 1px;
+  background-color: #ededed;
+}
+html .main .course .course2,
+body .main .course .course2 {
+  width: 100%;
+  height: 14.5333vw;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  line-height: 14.5333vw;
+}
+html .main .group,
+body .main .group {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  margin-top: 2.6667vw;
+}
+html .main .group .title,
+body .main .group .title {
+  width: 100%;
+  height: 9.7333vw;
+  padding-top: 4.1333vw;
+  padding-left: 3.3333vw;
+  padding-right: 2.8vw;
+  box-sizing: border-box;
+}
+html .main .group .title .left,
+body .main .group .title .left {
+  float: left;
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+html .main .group .title .right,
+body .main .group .title .right {
+  float: right;
+  font-size: 3.4667vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #bbbbbb;
+}
+html .main .group .groupItem,
+body .main .group .groupItem {
+  width: 100%;
+  height: 22.6667vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+html .main .group .groupItem .avator,
+body .main .group .groupItem .avator {
+  width: 12vw;
+  height: 12vw;
+  margin-left: 3.3333vw;
+  border-radius: 50%;
+}
+html .main .group .groupItem .avator img,
+body .main .group .groupItem .avator img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+html .main .group .groupItem .username,
+body .main .group .groupItem .username {
+  margin-left: 3.6vw;
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+html .main .group .groupItem .message,
+body .main .group .groupItem .message {
+  width: 22vw;
+  height: 8.8vw;
+  margin-left: 26.6667vw;
+}
+html .main .group .groupItem .message div,
+body .main .group .groupItem .message div {
+  font-size: 3.4667vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+}
+html .main .group .groupItem .btn,
+body .main .group .groupItem .btn {
+  width: 17.8667vw;
+  height: 8.2667vw;
+  background: linear-gradient(-45deg, #67c9fd 0%, #77d7f5 100%);
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 1.3333vw;
+  color: white;
+  line-height: 8.2667vw;
+  margin-left: 2.9333vw;
+}
+html .main .same,
+body .main .same {
+  width: 100%;
+  height: auto;
+  margin-top: 2.6667vw;
+  overflow: hidden;
+}
+html .main .same .inTop,
+body .main .same .inTop {
+  width: 100%;
+  height: auto;
+  padding-top: 2.8vw;
+  padding-left: 3.4667vw;
+  padding-right: 1vw;
+  background-color: white;
+  box-sizing: border-box;
+}
+html .main .same .inTop h2,
+body .main .same .inTop h2 {
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+html .main .same .inTop span,
+body .main .same .inTop span {
+  display: inline-block;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  margin-top: 5.0667vw;
+}
+html .main .same .bottom,
+body .main .same .bottom {
+  width: 100%;
+  height: 10.6667vw;
+  background-color: white;
+  margin-top: 1px;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #999999;
+  text-align: center;
+  line-height: 10.6667vw;
+}
+html .main .comment,
+body .main .comment {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding-top: 5.3333vw;
+  padding-left: 3.3333vw;
+  box-sizing: border-box;
+  margin-top: 2.6667vw;
+}
+html .main .comment .title,
+body .main .comment .title {
+  font-size: 4vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  padding-bottom: 2.9333vw;
+  box-sizing: border-box;
+}
+html .main .comment .commitItem,
+body .main .comment .commitItem {
+  width: 100%;
+  height: auto;
+  float: left;
+  margin-bottom: 10.4vw;
+}
+html .main .comment .commitItem .user,
+body .main .comment .commitItem .user {
+  width: 100%;
+  height: 10.6667vw;
+  padding-top: 2.9333vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+html .main .comment .commitItem .user .userAvator,
+body .main .comment .commitItem .user .userAvator {
+  width: 10.5333vw;
+  height: 10.1333vw;
+  border-radius: 50%;
+}
+html .main .comment .commitItem .user .userAvator img,
+body .main .comment .commitItem .user .userAvator img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+html .main .comment .commitItem .user .Uname,
+body .main .comment .commitItem .user .Uname {
+  width: 40vw;
+  height: 10.6667vw;
+  margin-left: 3.4667vw;
+}
+html .main .comment .commitItem .user .Uname .UName,
+body .main .comment .commitItem .user .Uname .UName {
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+html .main .comment .commitItem .user .Uname .grade,
+body .main .comment .commitItem .user .Uname .grade {
+  font-size: 3.2vw;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+html .main .comment .commitItem .user .Uname .grade .gradeNum,
+body .main .comment .commitItem .user .Uname .grade .gradeNum {
+  float: left;
+}
+html .main .comment .commitItem .user .Uname .grade .xinxin,
+body .main .comment .commitItem .user .Uname .grade .xinxin {
+  width: 20vw;
+  height: 4vw;
+  float: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+html .main .comment .commitItem .user .Uname .grade .xinxin .xinImg,
+body .main .comment .commitItem .user .Uname .grade .xinxin .xinImg {
+  width: 4vw;
+  height: 4vw;
+  background-image: url("../images/shopping_tab_sc_sel.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+html .main .comment .commitItem .user .Uname .grade .xinxin .xinImg2,
+body .main .comment .commitItem .user .Uname .grade .xinxin .xinImg2 {
+  width: 4vw;
+  height: 4vw;
+  background-image: url("../images/whxq_star_gray.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+html .main .comment .commitItem .user .time,
+body .main .comment .commitItem .user .time {
+  font-size: 3.2vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #999999;
+  margin-left: 16vw;
+}
+html .main .comment .commitItem .conContain,
+body .main .comment .commitItem .conContain {
+  width: 85.0667vw;
+  float: left;
+  height: auto;
+  margin-left: 11.4333vw;
+  padding-top: 3.3333vw;
+  padding-right: 3.3333vw;
+  box-sizing: border-box;
+}
+html .main .comment .commitItem .conContain span,
+body .main .comment .commitItem .conContain span {
+  font-size: 3.7333vw;
+  width: 100%;
+  height: auto;
+  display: block;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  line-height: 4.8vw;
+  display: inline-block;
+  margin: 0.9333vw;
+}
+html .main .comment .commitItem .conContain .comImg,
+body .main .comment .commitItem .conContain .comImg {
+  width: 25.3333vw;
+  height: 25.3333vw;
+  float: left;
+  margin: 0.9333vw;
+}
+html .main .comment .commitItem .conContain .comImg img,
+body .main .comment .commitItem .conContain .comImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+html .main .coMore,
+body .main .coMore {
+  width: 100%;
+  height: 11.7333vw;
+  margin-top: 1px;
+  font-size: 3.7333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #999999;
+  background-color: white;
+  text-align: center;
+  line-height: 11.7333vw;
+}
+html .main .groupBuyBottom,
+body .main .groupBuyBottom {
+  width: 100%;
+  height: 13.0667vw;
+  background-color: white;
+  margin-top: 17.3333vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+html .main .groupBuyBottom .BuyBottom,
+body .main .groupBuyBottom .BuyBottom {
+  width: 61.8667vw;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+html .main .groupBuyBottom .BuyBottom .shouc,
+body .main .groupBuyBottom .BuyBottom .shouc {
+  width: 5.8667vw;
+  height: 100%;
+}
+html .main .groupBuyBottom .BuyBottom .shouc div,
+body .main .groupBuyBottom .BuyBottom .shouc div {
+  width: 5.6vw;
+  height: 5.6vw;
+  margin-top: 1.7333vw;
+}
+html .main .groupBuyBottom .BuyBottom .shouc div img,
+body .main .groupBuyBottom .BuyBottom .shouc div img {
+  width: 100%;
+  height: 100%;
+}
+html .main .groupBuyBottom .BuyBottom .shouc span,
+body .main .groupBuyBottom .BuyBottom .shouc span {
+  display: inline-block;
+  margin-top: 1vw;
+  font-size: 2.9333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #212121;
+}
+html .main .groupBuyBottom .BuyBottom .zixun,
+body .main .groupBuyBottom .BuyBottom .zixun {
+  width: 5.8667vw;
+  height: 100%;
+}
+html .main .groupBuyBottom .BuyBottom .zixun div,
+body .main .groupBuyBottom .BuyBottom .zixun div {
+  width: 5.6vw;
+  height: 5.6vw;
+  margin-top: 1.7333vw;
+}
+html .main .groupBuyBottom .BuyBottom .zixun div img,
+body .main .groupBuyBottom .BuyBottom .zixun div img {
+  width: 100%;
+  height: 100%;
+}
+html .main .groupBuyBottom .BuyBottom .zixun span,
+body .main .groupBuyBottom .BuyBottom .zixun span {
+  display: inline-block;
+  margin-top: 1vw;
+  font-size: 2.9333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #212121;
+}
+html .main .groupBuyBottom .BuyBottom .share,
+body .main .groupBuyBottom .BuyBottom .share {
+  width: 5.8667vw;
+  height: 100%;
+}
+html .main .groupBuyBottom .BuyBottom .share div,
+body .main .groupBuyBottom .BuyBottom .share div {
+  width: 5.6vw;
+  height: 5.6vw;
+  margin-top: 1.7333vw;
+}
+html .main .groupBuyBottom .BuyBottom .share div img,
+body .main .groupBuyBottom .BuyBottom .share div img {
+  width: 100%;
+  height: 100%;
+}
+html .main .groupBuyBottom .BuyBottom .share span,
+body .main .groupBuyBottom .BuyBottom .share span {
+  display: inline-block;
+  margin-top: 1vw;
+  font-size: 2.9333vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #212121;
+}
+html .main .groupBuyBottom .addOrder,
+body .main .groupBuyBottom .addOrder {
+  width: 35.3333vw;
+  height: 100%;
+  background: #17bbf3;
+}
+html .main .groupBuyBottom .addOrder .coPrice,
+body .main .groupBuyBottom .addOrder .coPrice {
+  display: inline-block;
+  width: 100%;
+  height: 50%;
+  font-size: 4.2667vw;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  line-height: 7.7333vw;
+}
+html .main .groupBuyBottom .addOrder .coText,
+body .main .groupBuyBottom .addOrder .coText {
+  display: inline-block;
+  width: 100%;
+  height: 40%;
+  font-size: 3.4667vw;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+}
