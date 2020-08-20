@@ -37,12 +37,12 @@
         </div>
         <div class="images">
          <div class="imgMain">
-          <!-- <div class="image0">
+          <div class="image0">
             <img src="./images/jg_banner_photo_01.png" alt="">
           </div>
           <div class="image0">
             <img src="./images/jg_banner_photo_01.png" alt="">
-          </div> -->
+          </div>
          </div>
         </div>
         <div class="line"></div>
@@ -101,7 +101,7 @@
               <span class="number">已售2500</span>
               <span class="price">
                 <div class="nowPrice">￥<span>199.0</span></div>
-                <div class="oldPrice">&nbsp&nbsp&nbsp&nbsp￥<span>299.0</span></div>
+                <div class="oldPrice">&nbsp&nbsp&nbsp&nbsp￥<span>299.0</span><div class="oldLine"></div></div>
               </span>
           </div>
         </li>
@@ -114,6 +114,7 @@
           <div class="titleText">课程</div>
         </div>
         <li>
+          <a href="./course.html?id=17">
           <div class="image">
             <img src="./images/jg_banner_photo_01.png" alt="">
           </div>
@@ -125,9 +126,11 @@
                 <div class="oldPrice">&nbsp&nbsp&nbsp&nbsp￥<span>299.0</span></div>
               </span>
           </div>
+          </a>
         </li>
         <div class="line"></div>
         <li>
+          <a href="./course.html?id=17">
           <div class="image">
             <img src="./images/jg_banner_photo_01.png" alt="">
           </div>
@@ -139,6 +142,7 @@
                 <div class="oldPrice">&nbsp&nbsp&nbsp&nbsp￥<span>299.0</span></div>
               </span>
           </div>
+          </a>
         </li>
       </ul>
       <div class="consult">
@@ -154,9 +158,9 @@
     </div>
   </div>
   <script>
-    // var url=window.location.href;
+ var url=window.location.href;
  //获取sessionId和活动id
- var url="www.********.com/redict?id=9";
+//  var url="www.********.com/redict?id=9";
  var list1=url.split("?")[1].split("&");
  var object={};
  for(var i=0;i<list1.length;i++){
@@ -180,16 +184,20 @@
        var imgHtml="";
        var groupHtml="";
        var courseHtml="";
+      //获取购买人数
+      $(".buyPeople").text(data.sellCount+"人购买");
+
        for(var i=0;i<imgsLength;i++){
         imgHtml=imgHtml+"<div class='image0'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.imgList[i].img+" alt=''></div>";
        }
+       $(".imgMain").css("width",66.4*imgsLength+"vw");
        $(".imgMain").html(imgHtml);
        //修改地址
        var address=data.sheng+data.shi+data.qu+data.address;
        $(".mesText").text(address);
        //添加团购信息
        for(var j=0;j<groupList.length;j++){
-        groupHtml=groupHtml+"<li><div class='image'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+groupList[j].img+" alt=''></div><div class='title'><h3>"+groupList[j].name+"</h3><span class='number'>已售"+groupList[j].sellCount+"</span><span class='price'><div class='nowPrice'>￥<span>"+groupList[j].groupPrice+"</span></div><div class='oldPrice'>&nbsp&nbsp&nbsp&nbsp￥<span>"+groupList[j].price+"</span></div></span></div></li>"
+        groupHtml=groupHtml+"<li><a href=./groupBuy.html?id="+data.groupList[z].id+"><div class='image'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+groupList[j].img+" alt=''></div><div class='title'><h3>"+groupList[j].name+"</h3><span class='number'>已售"+groupList[j].sellCount+"</span><span class='price'><div class='nowPrice'>￥<span>"+groupList[j].groupPrice+"</span></div><div class='oldPrice'>&nbsp&nbsp&nbsp&nbsp￥<span>"+groupList[j].price+"</span><div class='oldLine'></div></div></span></div>></a></li>"
        }
 
        var group="<div class='title'><div class='titleIcon'><img src='./images/jg_icon_shopping.png' alt=''></div><div class='titleText'>团购</div></div>"+groupHtml;
@@ -197,7 +205,7 @@
        
        //添加课程信息
        for(var z=0;z<data.lessonList.length;z++){
-        courseHtml=courseHtml+"<li><div class='image'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.lessonList[z].img+" alt=''></div><div class='title'><h3>"+data.lessonList[z].name+"</h3><span class='number'>已售"+data.lessonList[z].sellCount+"</span><span class='price'><div class='nowPrice'>￥<span>"+data.lessonList[z].price+"</span></div><div class='oldPrice'>&nbsp&nbsp&nbsp&nbsp￥<span></span></div></span></div></li>"
+        courseHtml=courseHtml+"<li><a href=./course.html?id="+data.lessonList[z].id+"><div class='image'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.lessonList[z].img+" alt=''></div><div class='title'><h3>"+data.lessonList[z].name+"</h3><span class='number'>已售"+data.lessonList[z].sellCount+"</span><span class='price'><div class='nowPrice'>￥<span>"+data.lessonList[z].price+"</span></div></span></div></a></li>"
        }
 
        var course="<div class='title'><div class='titleIcon'><img src='./images/jg_icon_kc.png' alt=''></div><div class='titleText'>课程</div></div>"+courseHtml;

@@ -105,6 +105,15 @@ body .main .course .courseRight .text {
   font-weight: 400;
   color: #a9a9a9;
   margin-top: 2.0333vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+html .main .course .courseRight .text img,
+body .main .course .courseRight .text img {
+  width: 3.2vw;
+  height: 3.2vw;
+  margin-left: 11.3333vw;
 }
 html .main .course .courseRight .price,
 body .main .course .courseRight .price {

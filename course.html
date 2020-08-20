@@ -127,15 +127,16 @@
       </div>
     </div>
     <div class="addOrder">
-      <span class="coPrice">￥1100</span><br>
+      <span class="coPrice"></span><br>
       <span class="coText">发起拼团</span>
     </div>
   </div>
   </div>
 <script src="./js/swiper-3.4.2.min.js"></script>
 <script>
+  var url=window.location.href;
   //获取轮播图
- var url="www.********.com/redict?id=10";
+//  var url="www.********.com/redict?id=17";
  var list1=url.split("?")[1].split("&");
  var object={};
  for(var i=0;i<list1.length;i++){
@@ -177,10 +178,18 @@
       $(".courseServe").html(serveHtml);
 
       //获取课程介绍的内容
-      $(".courseContent").html(data.detail);
+      //修改img为width:100%
+      var regex = new RegExp('<img', 'gi');
+      if(data.detail!=null){
+        var txt = data.detail.replace(regex, '<img style="width: 100%; height:auto"');
+      $(".courseContent").html(txt);
+      }
   
       //获取购买须知的内容
-      $(".buyContent").html(data.content);
+      if(data.content!=null){
+        var txt2 = data.content.replace(regex, '<img style="width: 100%; height:auto"');
+      $(".buyContent").html(txt2);
+      }
       
       //获取评论的内容
       for(var z=0;z<data.commentList.length;z++){
@@ -193,7 +202,7 @@
             xinHtml=xinHtml+"<div class='xinImg2'></div>"
           }
         }
-        commitHtml=commitHtml+"<div class='commitItem'><div class='user'><div class='userAvator'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.commentList[z].avatar+" alt=''></div><div class='Uname'><div class='UName'>"+data.commentList[z].nick+"</div><div class='grade'><div class='gradeNum'>评分</div><div class='xinxin'>"+xinHtml+"</div></div></div><div class='time'>"+data.commentList[z].createTime+"</div></div><div class='conContain'><span>"+data.commentList[z].content+"</span><div class='comImg'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.commentList[z].img1+" alt=''></div><div class='comImg'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.commentList[z].img1+" alt=''></div><div class='comImg'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.commentList[z].img1+" alt=''></div></div></div>"
+        commitHtml=commitHtml+"<div class='commitItem'><div class='user'><div class='userAvator'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.commentList[z].avatar+" alt=''></div><div class='Uname'><div class='UName'>"+data.commentList[z].nick+"</div><div class='grade'><div class='gradeNum'>评分</div><div class='xinxin'>"+xinHtml+"</div></div></div><div class='time'>"+data.commentList[z].createTime+"</div></div><div class='conContain'><span>"+data.commentList[z].content+"</span><div class='comImg'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.commentList[z].img1+" alt=''></div><div class='comImg'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.commentList[z].img2+" alt=''></div><div class='comImg'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.commentList[z].img3+" alt=''></div></div></div>"
       }
       $(".comment").html("<div class='title'>用户评价</div>"+commitHtml);
 

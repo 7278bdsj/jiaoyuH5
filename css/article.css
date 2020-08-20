@@ -168,15 +168,15 @@ body .main .hotComments ul li .hotCommentsTop .avatorImg img {
   height: 100%;
   border-radius: 50%;
 }
-html .main .hotComments ul li .hotCommentsTop .nameAndTime,
-body .main .hotComments ul li .hotCommentsTop .nameAndTime {
-  width: 14.6667vw;
+html .main .hotComments ul li .hotCommentsTop .CommentsNameAndTime,
+body .main .hotComments ul li .hotCommentsTop .CommentsNameAndTime {
+  width: auto;
   height: 100%;
   float: left;
   margin-left: 2.9333vw;
 }
-html .main .hotComments ul li .hotCommentsTop .nameAndTime .name,
-body .main .hotComments ul li .hotCommentsTop .nameAndTime .name {
+html .main .hotComments ul li .hotCommentsTop .CommentsNameAndTime .CommentsName,
+body .main .hotComments ul li .hotCommentsTop .CommentsNameAndTime .CommentsName {
   height: 55%;
   font-size: 4vw;
   font-family: PingFang SC;
@@ -184,8 +184,8 @@ body .main .hotComments ul li .hotCommentsTop .nameAndTime .name {
   color: #333333;
   line-height: 6.6vw;
 }
-html .main .hotComments ul li .hotCommentsTop .nameAndTime .time,
-body .main .hotComments ul li .hotCommentsTop .nameAndTime .time {
+html .main .hotComments ul li .hotCommentsTop .CommentsNameAndTime .CommentsTime,
+body .main .hotComments ul li .hotCommentsTop .CommentsNameAndTime .CommentsTime {
   height: 45%;
   font-size: 3.4667vw;
   font-family: PingFang SC;

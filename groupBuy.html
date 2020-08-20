@@ -46,7 +46,7 @@
         <div class="number">已售2500</div>
         <div class="price">
           <div class="nowPrice">￥<span>199.0</span></div>
-          <div class="oldPrice">&nbsp&nbsp&nbsp&nbsp￥<span>299.0</span></div>
+          <div class="oldPrice">&nbsp&nbsp&nbsp&nbsp￥<span>299.0</span><div class="oldLine"></div></div>
         </div>
       </div>
     </div>
@@ -90,7 +90,7 @@
   <div class="same groupBuy">
     <div class="inTop">
       <h2>团购介绍</h2>
-      <span>团购介绍团购介绍团购介绍团购介绍团购介绍团购介绍团购介绍团购介绍团购介绍团购介绍团购介绍团购介绍。</span>
+      <span></span>
     </div>
     <div class="bottom">
       查看图文详情
@@ -99,7 +99,7 @@
   <div class="same Course">
     <div class="inTop">
       <h2>课程介绍</h2>
-      <span>课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍。</span>
+      <span></span>
     </div>
     <div class="bottom">
       查看图文详情
@@ -108,7 +108,7 @@
   <div class="same Buy">
     <div class="inTop">
       <h2>购买须知</h2>
-      <span>购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知购买须知。</span>
+      <span></span>
     </div>
     <div class="bottom">
       查看图文详情
@@ -129,8 +129,6 @@
     </div>
     <div class="conContain">
       <span>
-        服务非常满意，下次继续合作，服务非常满意，
-        下次继续合作
     </span>
     <div class="comImg">
       <img src="./images/jg_banner_photo_01.png" alt="">
@@ -174,7 +172,8 @@
   </div>
 <script src="./js/swiper-3.4.2.min.js"></script>
 <script>
-var url="www.********.com/redict?id=10";
+// var url=window.location.href;
+var url="www.********.com/redict?id=7";
 var list1=url.split("?")[1].split("&");
 var object={};
 for(var i=0;i<list1.length;i++){
@@ -208,6 +207,7 @@ $.ajax({
     })
     
     //获取课程信息
+    $(".course1 .left img").attr("src","http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.img);
     $(".course1 .right .title").text(data.name);
     $(".course1 .right .contain").text(data.intro);
     $(".course1 .right .number").text("已售"+data.sellCount);
@@ -217,13 +217,23 @@ $.ajax({
     $(".course2").html(serveHtml);
 
     //获取团购介绍
-    $(".groupBuy .inTop span").html(data.groupDetail);
+    var regex = new RegExp('<img', 'gi');
+    if(data.groupDetail!=null){
+      var txt = data.groupDetail.replace(regex, '<img style="width: 100%; height:auto"');
+    $(".groupBuy .inTop span").html(txt);
+    }
 
     //获取课程介绍
-    $(".Course .inTop span").html(data.detail);
+    if(data.detail!=null){
+      var  txt2 = data.detail.replace(regex, '<img style="width: 100%; height:auto"');
+    $(".Course .inTop span").html(txt2);
+    }
 
     //获取购买须知
-    $(".Buy .inTop span").html(data.content);
+    if(data.content!=null){
+      var  txt3 = data.content.replace(regex, '<img style="width: 100%; height:auto"');
+    $(".Buy .inTop span").html(txt3);
+    }
 
     //获取评论信息
     for(var z=0;z<data.commentList.length;z++){
@@ -257,7 +267,7 @@ $.ajax({
   type: "post",
   url: "http://47.107.81.81/jiaoyujigou/api/lesson/groupPage",
   data: {
-    id:7,
+    id:id,
     pageNumber:1,
     pageSize:3
   },
@@ -266,12 +276,38 @@ $.ajax({
     var data=res.data;
     var buyGroupHtml="";
     for(var j=0;j<data.list.length;j++){
-      buyGroupHtml=buyGroupHtml+" <div class='groupItem'><div class='avator'><img src=http://47.107.81.81/jiaoyujigou"+data.list[j].avatar+" alt=''></div><div class='username'>"+data.list[j].nick+"</div><div class='message'><div>还差"+data.list[j].num+"人拼成</div><div>剩余03:00:00</div></div><div class='btn'>去拼团</div></div>"
+    var groupTime=(new Date(data.list[j].createTime).getTime()+data.list[j].groupTime)/1000
+    // var groupTime=(new Date("2020-08-18 17:40:14").getTime())/1000
+    var nowTime=(new Date().getTime())/1000;
+    //过期时间差
+    var cutTime=(groupTime-nowTime);
+    if(cutTime<0){
+      cutTime=0;
+    }
+      buyGroupHtml=buyGroupHtml+"<div class='groupItem'><div class='avator'><img src=http://47.107.81.81/jiaoyujigou"+data.list[j].avatar+" alt=''></div><div class='username'>"+data.list[j].nick+"</div><div class='message'><div>还差<span style='color:#00A6FF'>"+data.list[j].num+"</span>人拼成</div><div>剩余"+secondsFormat(cutTime)+"</div></div><div class='btn'>去拼团</div></div>"
     }
     $(".group").html(" <div class='title'><div class='left'>拼团列表</div><div class='right'>查看更多</div></div>"+buyGroupHtml);
+
   }
 });
 
+//时分秒转化
+function secondsFormat( s ) { 
+    var day = Math.floor( s/ (24*3600) ); // Math.floor()向下取整 
+    var hour = Math.floor( (s - day*24*3600) / 3600);
+    if(hour<10){
+      hour="0"+hour;
+    }
+    var minute = Math.floor( (s - day*24*3600 - hour*3600) /60 ); 
+    if(minute<10){
+      minute="0"+minute;
+    }
+    var second = Math.floor(s - day*24*3600 - hour*3600 - minute*60); 
+    if(second<10){
+      second="0"+second;
+    }
+    return  hour+":"+minute+":"+second;
+}
 </script>
 </body>
 </html>

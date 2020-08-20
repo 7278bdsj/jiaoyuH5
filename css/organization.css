@@ -425,6 +425,13 @@ body .main .bottom .group-buy li .title .number {
   color: #bbbbbb;
   margin-top: 2.2vw;
 }
+html .main .bottom .group-buy li .title .price,
+body .main .bottom .group-buy li .title .price {
+  float: left;
+  display: block;
+  width: auto;
+  height: auto;
+}
 html .main .bottom .group-buy li .title .price .nowPrice,
 body .main .bottom .group-buy li .title .price .nowPrice {
   float: left;
@@ -448,6 +455,7 @@ body .main .bottom .group-buy li .title .price .oldPrice {
   font-weight: bold;
   color: #cecece;
   line-height: 6.9333vw;
+  position: relative;
 }
 html .main .bottom .group-buy li .title .price .oldPrice span,
 body .main .bottom .group-buy li .title .price .oldPrice span {
@@ -455,6 +463,15 @@ body .main .bottom .group-buy li .title .price .oldPrice span {
   font-family: DIN;
   font-weight: bold;
   color: #cecece;
+}
+html .main .bottom .group-buy li .title .price .oldPrice .oldLine,
+body .main .bottom .group-buy li .title .price .oldPrice .oldLine {
+  position: absolute;
+  width: 15.6vw;
+  height: 2px;
+  background-color: #cecece;
+  top: 3.3333vw;
+  left: 5.6vw;
 }
 html .main .bottom .course,
 body .main .bottom .course {

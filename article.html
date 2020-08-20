@@ -40,9 +40,9 @@
             <div class="avatorImg">
               <img src="./images/jg_banner_photo_01.png" alt="">
             </div>
-            <div class="nameAndTime">
-              <div class="name">嘉琪</div>
-              <div class="time">1小时前</div>
+            <div class="CommentsNameAndTime">
+              <div class="CommentsName">嘉琪</div>
+              <div class="CommentsTime">1小时前</div>
             </div>
             <div class="zhang">
               <div class="zhangImg">
@@ -63,19 +63,19 @@
         <div class="articleBottomIcon">
           <img src="./images/article_tab_icon_like_sel.png" alt="">
         </div>
-        <div class="articleBottomText">999+</div>
+        <div class="zan articleBottomText">999+</div>
       </div>
       <div class="item">
         <div class="articleBottomIcon">
           <img src="./images/article_tab_icon_com.png" alt="">
         </div>
-        <div class="articleBottomText">999+</div>
+        <div class="pinlun articleBottomText">999+</div>
       </div>
       <div class="item">
         <div class="articleBottomIcon">
           <img src="./images/article_tab_icon_sc_sel.png" alt="">
         </div>
-        <div class="articleBottomText">999+</div>
+        <div class="shouchang articleBottomText">999+</div>
       </div>
       <div class="item">
         <div class="articleBottomIcon">
@@ -84,5 +84,60 @@
       </div>
     </div>
   </div>
+  <script>
+    //获取url中的参数
+//  var url="www.********.com/index.html?id=9&sessionId=adasasascasafdsgdg";
+ var url=window.location.href;
+ var list1=url.split("?")[1].split("&");
+ var object={};
+ for(var i=0;i<list1.length;i++){
+   var list2=list1[i].split("=");
+   object[list2[0]]=list2[1];
+ }
+ var id=object.id;
+ var sessionId=object.sessionId;
+
+    //获取文章详情内容
+    $.ajax({
+      type: "post",
+      url: "http://47.107.81.81/jiaoyujigou/api/article/detail",
+      data: {
+        id:id,
+        sessionId:sessionId
+      },
+      dataType: "json",
+      success: function (res) {
+        var data=res.data;
+        $(".articleMain h2").text(data.title);
+        $(".nameAndTime .name").text(data.organizationName);
+        $(".nameAndTime .time").text(data.createTime);
+        $(".articleContent").text(data.content);
+        $(".zan").text(data.zanCount);
+        $(".pinlun").text(data.commentCount);
+        $(".shouchang").text(data.collectCount);
+      }
+    });
+
+    //获取评论信息
+    $.ajax({
+      type: "post",
+      url: "http://47.107.81.81/jiaoyujigou/api/comment/page",
+      data: {
+        pageNumber:1,
+        pageSize:10,
+        type:1,
+        ids:id
+      },
+      dataType: "json",
+      success: function (res) {
+        var data=res.data;
+        var commitHtml="";
+        for(var i=0;i<data.list.length;i++){
+          commitHtml+="<li><div class='hotCommentsTop'><div class='avatorImg'><img src=http://47.107.81.81/jiaoyujigou"+data.list[i].avatar+" alt=''></div><div class='CommentsNameAndTime'><div class='CommentsName'>"+data.list[i].nick+"</div><div class='CommentsTime'>"+data.list[i].createTime+"</div></div><div class='zhang'><div class='zhangImg'><img src='./images/discover_icon_like.png' alt=''></div><div class='zhangNum'>"+data.list[i].zanCount+"</div></div></div><div class='hotCommentsBottom'>"+data.list[i].content+"</div></li>"
+        }
+        $(".hotComments ul").html(commitHtml);
+      }
+    });
+  </script>
 </body>
 </html>

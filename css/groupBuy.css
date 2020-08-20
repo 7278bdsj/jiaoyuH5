@@ -154,6 +154,7 @@ body .main .course .course1 .right .price .oldPrice {
   font-weight: bold;
   color: #cecece;
   line-height: 6.9333vw;
+  position: relative;
 }
 html .main .course .course1 .right .price .oldPrice span,
 body .main .course .course1 .right .price .oldPrice span {
@@ -161,6 +162,15 @@ body .main .course .course1 .right .price .oldPrice span {
   font-family: DIN;
   font-weight: bold;
   color: #cecece;
+}
+html .main .course .course1 .right .price .oldPrice .oldLine,
+body .main .course .course1 .right .price .oldPrice .oldLine {
+  position: absolute;
+  width: 15.6vw;
+  height: 2px;
+  background-color: #cecece;
+  top: 3.3333vw;
+  left: 5.6vw;
 }
 html .main .course .line,
 body .main .course .line {

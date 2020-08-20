@@ -25,7 +25,7 @@
       </div>
       <div class="courseRight">
         <h2>美联英语</h2>
-        <div class="text">雅思英语阅读提分指南</div>
+        <div class="text">雅思英语阅读提分指南<img src="./images/settinf_icon_more.png" alt=""></div>
         <div class="price"><span>￥</span><div class="priceNum">2333</div></div>
       </div>
     </div>
@@ -48,7 +48,8 @@
     </div>
   </div>
 <script>
-var url="www.********.com/redict?id=9&sessionId=adasasascasafdsgdg";
+var url=window.location.href;
+// var url="www.********.com/redict?id=9&sessionId=adasasascasafdsgdg";
  var list1=url.split("?")[1].split("&");
  var object={};
  for(var i=0;i<list1.length;i++){
@@ -59,7 +60,6 @@ var url="www.********.com/redict?id=9&sessionId=adasasascasafdsgdg";
  var sessionId=object.sessionId;
  
  //获取拼团订单的详情信息
-
  $.ajax({
    type: "post",
    url: "http://47.107.81.81/jiaoyujigou/api/order/pinDetail",
@@ -71,6 +71,7 @@ var url="www.********.com/redict?id=9&sessionId=adasasascasafdsgdg";
    success: function (res) {
      var data=res.data;
      var leader={};
+     $(".courseLeft img").attr("src","http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.img);
      $(".courseRight h2").text(data.name);
      $(".courseRight .text").text(data.organizationName);
      $(".priceNum").text(data.price);
