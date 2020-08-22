@@ -165,15 +165,15 @@
       </div>
     </div>
     <div class="addOrder">
-      <span class="coPrice">￥1100</span><br>
+      <span class="coPrice"></span><br>
       <span class="coText">发起拼团</span>
     </div>
   </div>
   </div>
 <script src="./js/swiper-3.4.2.min.js"></script>
 <script>
-// var url=window.location.href;
-var url="www.********.com/redict?id=7";
+var url=window.location.href;
+// var url="www.********.com/redict?id=7";
 var list1=url.split("?")[1].split("&");
 var object={};
 for(var i=0;i<list1.length;i++){
@@ -181,6 +181,7 @@ for(var i=0;i<list1.length;i++){
   object[list2[0]]=list2[1];
 }
 var id=object.id;
+var groupPrice=object.groupPrice;
 $.ajax({
   type: "post",
   url: "http://47.107.81.81/jiaoyujigou/api/lesson/detail",
@@ -211,9 +212,11 @@ $.ajax({
     $(".course1 .right .title").text(data.name);
     $(".course1 .right .contain").text(data.intro);
     $(".course1 .right .number").text("已售"+data.sellCount);
-    $(".course1 .right .price .nowPrice span").text(data.price)
+    $(".course1 .right .price .nowPrice span").text(groupPrice);
+    $(".course1 .right .price .oldPrice span").text(data.price);
+
     //获取课程服务的信息
-    // serveHtml="<span>"+data.serviceContent.content1+"</span>&nbsp&nbsp<span>"+data.serviceContent.content2+"</span>&nbsp&nbsp<span>"+data.serviceContent.content3+"</span>&nbsp&nbsp<span>"+data.serviceContent.content4+"</span>&nbsp&nbsp"
+    serveHtml="<span>"+data.serviceContent.content1+"</span>&nbsp&nbsp<span>"+data.serviceContent.content2+"</span>&nbsp&nbsp<span>"+data.serviceContent.content3+"</span>&nbsp&nbsp<span>"+data.serviceContent.content4+"</span>&nbsp&nbsp"
     $(".course2").html(serveHtml);
 
     //获取团购介绍
@@ -284,7 +287,7 @@ $.ajax({
     if(cutTime<0){
       cutTime=0;
     }
-      buyGroupHtml=buyGroupHtml+"<div class='groupItem'><div class='avator'><img src=http://47.107.81.81/jiaoyujigou"+data.list[j].avatar+" alt=''></div><div class='username'>"+data.list[j].nick+"</div><div class='message'><div>还差<span style='color:#00A6FF'>"+data.list[j].num+"</span>人拼成</div><div>剩余"+secondsFormat(cutTime)+"</div></div><div class='btn'>去拼团</div></div>"
+      buyGroupHtml=buyGroupHtml+"<div class='groupItem'><div class='avator'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.list[j].avatar+" alt=''></div><div class='username'>"+data.list[j].nick+"</div><div class='message'><div>还差<span style='color:#00A6FF'>"+data.list[j].num+"</span>人拼成</div><div>剩余"+secondsFormat(cutTime)+"</div></div><div class='btn'>去拼团</div></div>"
     }
     $(".group").html(" <div class='title'><div class='left'>拼团列表</div><div class='right'>查看更多</div></div>"+buyGroupHtml);
 

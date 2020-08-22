@@ -84,7 +84,7 @@ body .main .articleMain .nameAndTime {
 }
 html .main .articleMain .nameAndTime .name,
 body .main .articleMain .nameAndTime .name {
-  width: 30.6667vw;
+  width: auto;
   height: 100%;
   float: left;
   font-size: 3.4667vw;

@@ -197,7 +197,7 @@
        $(".mesText").text(address);
        //添加团购信息
        for(var j=0;j<groupList.length;j++){
-        groupHtml=groupHtml+"<li><a href=./groupBuy.html?id="+data.groupList[z].id+"><div class='image'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+groupList[j].img+" alt=''></div><div class='title'><h3>"+groupList[j].name+"</h3><span class='number'>已售"+groupList[j].sellCount+"</span><span class='price'><div class='nowPrice'>￥<span>"+groupList[j].groupPrice+"</span></div><div class='oldPrice'>&nbsp&nbsp&nbsp&nbsp￥<span>"+groupList[j].price+"</span><div class='oldLine'></div></div></span></div>></a></li>"
+        groupHtml=groupHtml+"<li><a href=./groupBuy.html?id="+data.groupList[z].id+"&groupPrice="+groupList[j].groupPrice+"><div class='image'><img src=http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+groupList[j].img+" alt=''></div><div class='title'><h3>"+groupList[j].name+"</h3><span class='number'>已售"+groupList[j].sellCount+"</span><span class='price'><div class='nowPrice'>￥<span>"+groupList[j].groupPrice+"</span></div><div class='oldPrice'>&nbsp&nbsp&nbsp&nbsp￥<span>"+groupList[j].price+"</span><div class='oldLine'></div></div></span></div>></a></li>"
        }
 
        var group="<div class='title'><div class='titleIcon'><img src='./images/jg_icon_shopping.png' alt=''></div><div class='titleText'>团购</div></div>"+groupHtml;

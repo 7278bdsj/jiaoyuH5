@@ -61,7 +61,7 @@
     <div class="articleBottom">
       <div class="item">
         <div class="articleBottomIcon">
-          <img src="./images/article_tab_icon_like_sel.png" alt="">
+          <img src="./images/article_tab_icon_like.png" alt="">
         </div>
         <div class="zan articleBottomText">999+</div>
       </div>
@@ -73,7 +73,7 @@
       </div>
       <div class="item">
         <div class="articleBottomIcon">
-          <img src="./images/article_tab_icon_sc_sel.png" alt="">
+          <img src="./images/article_tab_icon_sc.png" alt="">
         </div>
         <div class="shouchang articleBottomText">999+</div>
       </div>
@@ -86,8 +86,8 @@
   </div>
   <script>
     //获取url中的参数
-//  var url="www.********.com/index.html?id=9&sessionId=adasasascasafdsgdg";
- var url=window.location.href;
+ var url="www.********.com/index.html?id=1";
+//  var url=window.location.href;
  var list1=url.split("?")[1].split("&");
  var object={};
  for(var i=0;i<list1.length;i++){
@@ -96,14 +96,12 @@
  }
  var id=object.id;
  var sessionId=object.sessionId;
-
     //获取文章详情内容
     $.ajax({
       type: "post",
       url: "http://47.107.81.81/jiaoyujigou/api/article/detail",
       data: {
-        id:id,
-        sessionId:sessionId
+        id:id
       },
       dataType: "json",
       success: function (res) {
@@ -111,10 +109,19 @@
         $(".articleMain h2").text(data.title);
         $(".nameAndTime .name").text(data.organizationName);
         $(".nameAndTime .time").text(data.createTime);
-        $(".articleContent").text(data.content);
+        $(".articleContent").html(data.content);
         $(".zan").text(data.zanCount);
         $(".pinlun").text(data.commentCount);
         $(".shouchang").text(data.collectCount);
+        $(".articleImg img").attr("src","http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+data.img);
+        //测试
+        // $(".articleMain h2").text("快速学习编程");
+        // $(".nameAndTime .name").text("黑马教育");
+        // $(".nameAndTime .time").text("2020/08/20 11:20");
+        // $(".articleContent").text("ififififififififififififififififif");
+        // $(".zan").text(20);
+        // $(".pinlun").text(70);
+        // $(".shouchang").text(10);
       }
     });
 

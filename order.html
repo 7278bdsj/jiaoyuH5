@@ -64,8 +64,7 @@ var url=window.location.href;
    type: "post",
    url: "http://47.107.81.81/jiaoyujigou/api/order/pinDetail",
    data: {
-     id:id,
-     sessionId:sessionId
+     id:id
    },
    dataType: "json",
    success: function (res) {
@@ -86,6 +85,7 @@ var url=window.location.href;
      }
      $(".user img").attr("src","http://xueyizhi.oss-cn-shenzhen.aliyuncs.com"+leader.avatar);
      $(".groupBtn").text("参与"+leader.nick+"的拼团")
+
    }
  });
 </script>
